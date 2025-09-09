@@ -1,0 +1,22 @@
+name: project-w
+services:
+- name: frontend
+  source_dir: /
+  github:
+    repo: your-username/project-w
+    branch: main
+  run_command: npm run build
+  static_sites:
+  - name: frontend
+    source_dir: dist
+    routes:
+    - path: /
+- name: backend
+  source_dir: /backend
+  github:
+    repo: your-username/project-w
+    branch: main
+  run_command: npm start
+  http_port: 3000
+  routes:
+  - path: /api

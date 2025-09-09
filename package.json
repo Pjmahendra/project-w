@@ -14,7 +14,9 @@
     "start": "./start-project.sh",
     "test:api": "cd backend && node test-api.js",
     "test:integration": "node simple-test.js",
-    "setup": "cd backend && npm run setup"
+    "setup": "cd backend && npm run setup",
+    "deploy:build": "npm run build && cd backend && npm install --production",
+    "deploy:start": "cd backend && NODE_ENV=production npm start"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",
