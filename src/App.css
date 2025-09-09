@@ -1,0 +1,115 @@
+html{
+  color: aliceblue;
+}
+body {
+  background-image: url("./assets/bgimage.jpg");
+  min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(45px);
+  padding: 0;
+  font-family: sans-serif;
+
+  scroll-behavior: smooth;
+}
+/* Side images scrollable container */
+.side-images-container {
+  height: 24rem; /* h-96 equivalent */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 equivalent */
+  
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.side-images-container::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+
+/* Individual side image cards */
+.side-image-card {
+  background: linear-gradient(145deg, oklch(1 0 0), oklch(0.98 0.02 85));
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.side-image-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+/* Card content wrapper */
+.card-content {
+  padding: 0;
+}
+
+/* Image wrapper with aspect ratio and gradient background */
+.image-wrapper {
+  position: relative;
+  aspect-ratio: 1 / 1; /* aspect-square equivalent */
+  background: linear-gradient(135deg, oklch(0.6 0.2 270 / 0.2), oklch(0.65 0.15 45 / 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image styling */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+.image1{
+  
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  align-items: center;
+  border-radius:2rem;
+  min-width:50%;
+  box-sizing:border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 50rem;
+}
+.message-box{
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  text-align: center;
+  padding:2rem 1rem 2rem 1rem;
+  height: 100px;
+  border-radius: 1rem;
+  background: rgb(138, 203, 247);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+.message-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .images-page{
+    flex-direction: column;
+    align-items: center;
+  }
+  .message-grid{
+    grid-template-columns: 1fr ;
+    row-gap: 1rem;;
+  }
+}
