@@ -81,7 +81,7 @@ function AppCustom() {
         <h1 style={{alignItems:'center',justifyContent:'center',textAlign:'center',fontSize:'50px',fontWeight:"bolder", padding:0}}>
           HAPPY BIRTHDAY LAASYA🎂
         </h1>
-        <p style={{textAlign:"center" ,padding:0}}>to our most favorite person ever🥰</p>
+        <p style={{textAlign:"center" ,padding:0}}>to my favaorite person</p>
       </div>
 
       <div style={{ width: '100%', height: '70vh' }}>
