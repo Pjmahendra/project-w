@@ -5,14 +5,14 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "functions": {
-    "backend/server.js": {
+    "api/server.js": {
       "includeFiles": "backend/data/**"
     }
   },
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "/backend/server"
+      "destination": "/api/server"
     }
   ]
 }
