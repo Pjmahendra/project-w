@@ -1,7 +1,8 @@
 {
   "version": 2,
   
-  "buildCommand": "npm run build",
+  "installCommand": "npm ci || npm install",
+  "buildCommand": "npx vite build",
   "outputDirectory": "dist",
   "functions": {
     "backend/server.js": {
