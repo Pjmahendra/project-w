@@ -37,9 +37,9 @@ function AppCustom() {
           customApi.getBirthdayWishes()
         ]);
         
-        setBirthdayMessages(messagesResponse.data);
+        setBirthdayMessages(messagesResponse.data || []);
         setServerStats(statsResponse);
-        setWishes(wishesResponse.data);
+        setWishes(wishesResponse.data || []);
       } catch (error) {
         console.error('Failed to load data from custom server:', error);
         // Fallback to hardcoded messages
@@ -49,6 +49,7 @@ function AppCustom() {
           "Here's to celebrating the amazing person you are today and always! 💖",
           "May all your birthday wishes come true and your dreams take flight! 🌟"
         ]);
+        setWishes([]);
       } finally {
         setLoading(false);
       }
@@ -97,35 +98,12 @@ function AppCustom() {
     <div className='APP' style={{padding:'20px'}}>
       <div style={{fontSize:'10rem'}}></div>
       
-      {/* Enhanced Server Status Indicator */}
-      {serverStats && (
-        <div style={{
-          position: 'fixed',
-          top: '10px',
-          right: '10px',
-          background: '#4CAF50',
-          color: 'white',
-          padding: '8px 12px',
-          borderRadius: '4px',
-          fontSize: '12px',
-          zIndex: 1000,
-          boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
-        }}>
-          Custom Server Online ✓
-          <div style={{fontSize: '10px', opacity: 0.8}}>
-            {serverStats.analytics?.data?.totalVisitors || 0} visitors
-          </div>
-        </div>
-      )}
 
       <div>
         <h1 style={{alignItems:'center',justifyContent:'center',textAlign:'center',fontSize:'50px',fontWeight:"bolder", padding:0}}>
           HAPPY BIRTHDAY LAASYA🎂
         </h1>
         <p style={{textAlign:"center" ,padding:0}}>to our most favorite person ever🥰</p>
-        <p style={{textAlign:'center',fontWeight:'300',fontSize:'2rem'}}>
-          How lucky we are to have such a wonderful, amazing, and absolutely incredible person like Laasya!
-        </p>
       </div>
 
       <div style={{ width: '100%', height: '70vh' }}>
@@ -166,7 +144,7 @@ function AppCustom() {
           {loading ? (
             <div style={{textAlign: 'center', padding: '2rem'}}>Loading birthday messages...</div>
           ) : (
-            birthdayMessages.slice(0, 4).map((message, index) => (
+            (birthdayMessages || []).slice(0, 4).map((message, index) => (
               <div key={index} className='message-box'>{message}</div>
             ))
           )}
@@ -258,11 +236,11 @@ function AppCustom() {
       </div>
 
       {/* Display Recent Wishes */}
-      {wishes.length > 0 && (
+      {(wishes || []).length > 0 && (
         <div style={{textAlign:'center',padding:'2rem'}}>
           <h3>Recent Birthday Wishes for Laasya 💝</h3>
           <div style={{maxWidth: '600px', margin: '0 auto'}}>
-            {wishes.slice(-3).map((wish, index) => (
+            {(wishes || []).slice(-3).map((wish, index) => (
               <div key={index} style={{
                 background: 'rgba(255,255,255,0.1)',
                 padding: '15px',

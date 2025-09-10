@@ -1,7 +1,7 @@
 // Custom API service for your personalized birthday server
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-  ? 'http://localhost:3001' 
-  : `http://192.168.0.174:3001`;
+  ? 'http://localhost:3000' 
+  : `http://192.168.0.174:3000`;
 
 class CustomApiService {
   // Generic fetch wrapper with enhanced error handling
