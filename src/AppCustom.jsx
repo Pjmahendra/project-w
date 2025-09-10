@@ -58,12 +58,13 @@ function AppCustom() {
   const handleButtonClick = async () => {
     setShowText(true);
     setButtonClicked(true);
-    
     try {
       const response = await customApi.getRandomBirthdayMessage();
-      if (response.success) {
-        console.log('Random birthday message:', response.data.message);
-        // You could show this in a toast or modal
+      if (response?.success && response?.message) {
+        // Prepend the new birthday message to the list
+        setBirthdayMessages(prev => [response.message, ...prev]);
+      } else if (response?.success && response?.data?.message) {
+        setBirthdayMessages(prev => [response.data.message, ...prev]);
       }
     } catch (error) {
       console.error('Failed to get random message:', error);

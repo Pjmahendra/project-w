@@ -47,13 +47,12 @@ function App() {
   const handleButtonClick = async () => {
     setShowText(true);
     setButtonClicked(true);
-    
-    // Try to get a random message from backend
     try {
       const response = await apiService.request('/api/birthday/random-message');
-      if (response.success) {
-        // You could display this random message somewhere
-        console.log('Random birthday message:', response.data.message);
+      if (response?.success && response?.message) {
+        setBirthdayMessages(prev => [response.message, ...prev]);
+      } else if (response?.success && response?.data?.message) {
+        setBirthdayMessages(prev => [response.data.message, ...prev]);
       }
     } catch (error) {
       console.error('Failed to get random message:', error);
@@ -81,8 +80,8 @@ function App() {
       )}
       <div>
         <h1 style={{alignItems:'center',justifyContent:'center',textAlign:'center',fontSize:'50px',fontWeight:"bolder", padding:0}}>HAPPY BIRTHDAY🎂</h1>
-        <p style={{textAlign:"center" ,padding:0}}>to my favorite person🥰</p>
-        <p style={{textAlign:'center',fontWeight:'300',fontSize:'2rem'}}>How lucky you are being a wonderful, amazing, and an absolutely incredible person! </p>
+        <p style={{textAlign:"center" ,padding:0}}>to my most favorite person 🥰</p>
+        <p style={{textAlign:'center',fontWeight:'300',fontSize:'2rem'}}>How lucky you are being a wonderful, amazing, and an absolutely incredible person!</p>
       </div>
       {/* <div style={{ height: '600px', position: 'relative' }}>
         <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
