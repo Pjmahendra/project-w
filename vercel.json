@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "installCommand": "npm install && cd backend && npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "builds": [
@@ -8,6 +9,11 @@
       "use": "@vercel/node"
     }
   ],
+  "functions": {
+    "backend/server.js": {
+      "includeFiles": "backend/data/**"
+    }
+  },
   "routes": [
     {
       "src": "/api/(.*)",
