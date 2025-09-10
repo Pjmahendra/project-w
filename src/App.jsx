@@ -81,7 +81,7 @@ function App() {
       )}
       <div>
         <h1 style={{alignItems:'center',justifyContent:'center',textAlign:'center',fontSize:'50px',fontWeight:"bolder", padding:0}}>HAPPY BIRTHDAY🎂</h1>
-        <p style={{textAlign:"center" ,padding:0}}>to my most favorite person ever🥰</p>
+        <p style={{textAlign:"center" ,padding:0}}>to my favorite person🥰</p>
         <p style={{textAlign:'center',fontWeight:'300',fontSize:'2rem'}}>How lucky you are being a wonderful, amazing, and an absolutely incredible person!</p>
       </div>
       {/* <div style={{ height: '600px', position: 'relative' }}>
