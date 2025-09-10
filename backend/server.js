@@ -399,30 +399,5 @@ app.use('*', (req, res) => {
   });
 });
 
-// Start server
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Project W Backend Server running on port ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`📈 Analytics: http://localhost:${PORT}/api/analytics`);
-  console.log(`🎨 Gallery API: http://localhost:${PORT}/api/gallery`);
-  console.log(`🎂 Birthday API: http://localhost:${PORT}/api/birthday/messages`);
-  console.log(`👥 Visitors API: http://localhost:${PORT}/api/visitors`);
-  console.log(`💝 Wishes API: http://localhost:${PORT}/api/wishes`);
-  console.log(`\n🌐 Server accessible from:`);
-  console.log(`   - http://localhost:${PORT}`);
-  console.log(`   - http://127.0.0.1:${PORT}`);
-  console.log(`   - http://192.168.0.116:${PORT} (if on local network)`);
-  console.log(`\n🗄️  Database: MySQL (project_w_db)`);
-  console.log(`🔗 Frontend: http://localhost:5173`);
-});
-
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('SIGTERM received, shutting down gracefully');
-  process.exit(0);
-});
-
-process.on('SIGINT', () => {
-  console.log('SIGINT received, shutting down gracefully');
-  process.exit(0);
-});
+// Export Express app for serverless environments (e.g., Vercel)
+export default app;
