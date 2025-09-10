@@ -3,12 +3,6 @@
   "installCommand": "npm install && cd backend && npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "builds": [
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
-    }
-  ],
   "functions": {
     "backend/server.js": {
       "includeFiles": "backend/data/**"
