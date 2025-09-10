@@ -14,14 +14,10 @@
       "includeFiles": "backend/data/**"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "dist/$1"
+      "source": "/api/:match*",
+      "destination": "/backend/server"
     }
   ],
   "env": {
