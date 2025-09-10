@@ -82,6 +82,7 @@ function AppCustom() {
           HAPPY BIRTHDAY LAASYA🎂
         </h1>
         <p style={{textAlign:"center" ,padding:0}}>to my favaorite person</p>
+        <p style={{textAlign:'center',fontWeight:'300',fontSize:'2rem'}}>How lucky you are being a wonderful, amazing, and an absolutely incredible person!</p>
       </div>
 
       <div style={{ width: '100%', height: '70vh' }}>
