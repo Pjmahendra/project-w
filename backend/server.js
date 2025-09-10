@@ -399,5 +399,5 @@ app.use('*', (req, res) => {
   });
 });
 
-// Export Express app for serverless environments (e.g., Vercel)
-export default app;
+// Export Express app as a handler function for serverless (Vercel)
+export default (req, res) => app(req, res);
