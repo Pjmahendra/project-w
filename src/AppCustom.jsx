@@ -149,7 +149,7 @@ function AppCustom() {
       {/* Wishes feature removed */}
 
       <div style={{textAlign:'center',fontWeight:'300',padding:'2rem',fontSize:'01rem'}}>
-        <p>Here's to another year of laughter, love, and unforgettable memories for Laasya! 🎂✨</p>
+        <p>Here's to another day of laughter, love, and unforgettable memories for Laasya! 🎂✨</p>
       </div>
     </div>
   )
