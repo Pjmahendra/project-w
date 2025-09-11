@@ -32,8 +32,8 @@ function App() {
         // Fallback to hardcoded messages if backend is not available
         setBirthdayMessages([
           "May your special day be filled with happiness, laughter, and love! 🎉",
-          "Wishing you a day ahead full of adventure, joy, and beautiful moments! ✨",
-          "May all your birthday wishes come true and your dreams take flight! 🌟"
+          "May all your birthday wishes come true and your dreams take flight! 🌟",
+          "Wishing you a day ahead full of adventure, joy, and beautiful moments! ✨"
         ]);
       } finally {
         setLoading(false);
