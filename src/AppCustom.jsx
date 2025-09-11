@@ -42,8 +42,8 @@ function AppCustom() {
         // Fallback to hardcoded messages
         setBirthdayMessages([
           "May your special day be filled with happiness, laughter, and love! 🎉",
-          "Wishing you a year ahead full of adventure, joy, and beautiful moments! ✨",
-          "May all your birthday wishes come true and your dreams take flight! 🌟"
+          "May all your birthday wishes come true and your dreams take flight! 🌟",
+          "Wishing you a year ahead full of adventure, joy, and beautiful moments! ✨"
         ]);
         // wishes feature removed
       } finally {
