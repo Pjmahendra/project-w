@@ -43,7 +43,6 @@ function AppCustom() {
         setBirthdayMessages([
           "May your special day be filled with happiness, laughter, and love! 🎉",
           "Wishing you a year ahead full of adventure, joy, and beautiful moments! ✨",
-          "Here's to celebrating the amazing person you are today and always! 💖",
           "May all your birthday wishes come true and your dreams take flight! 🌟"
         ]);
         // wishes feature removed
@@ -82,7 +81,7 @@ function AppCustom() {
         <h1 style={{alignItems:'center',justifyContent:'center',textAlign:'center',fontSize:'50px',fontWeight:"bolder", padding:0}}>
           HAPPY BIRTHDAY LAASYA🎂
         </h1>
-        <p style={{textAlign:"center" ,padding:0}}>to my favaorite person</p>
+        <p style={{textAlign:"center" ,padding:0}}>to my favaorite personperson❣️</p>
         <p style={{textAlign:'center',fontWeight:'300',fontSize:'2rem'}}>How lucky you are being a wonderful, amazing, and an absolutely incredible person!</p>
       </div>
 
@@ -142,7 +141,7 @@ function AppCustom() {
           </button>
         ) : (
           <div style={{textAlign:'center',fontSize:'1.2rem',fontWeight:'500',color:'#333'}}>
-            Laasya, neeku evarina cheppara nee smile bauntadi ani!! 🎉
+            Nuvvu naavuthu unte chaala bauntav Laasya,keep smiling!! 🎉
           </div>
         )}
       </div>
